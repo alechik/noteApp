@@ -1,0 +1,58 @@
+<!-- card_note.xml -->
+
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:layout_marginEnd="8dp"
+    android:layout_marginStart="8dp"
+    android:layout_marginTop="8dp"
+    android:elevation="4dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/cardview_background">
+
+        <!-- Nombre de la nota -->
+        <TextView
+            android:id="@+id/text_note_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de la nota"
+            android:textSize="22sp"
+            android:textColor="#000000" />
+
+        <!-- Fecha y hora de última edición -->
+        <TextView
+            android:id="@+id/text_last_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/text_note_title"
+            android:layout_marginTop="4dp"
+            android:text="Fecha y hora de última edición"
+            android:textSize="17sp"
+            android:textColor="#808080" />
+
+        <!-- Imagen de eliminar nota -->
+        <ImageButton
+            android:id="@+id/delete_image_note"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toLeftOf="@id/image_note"
+            android:scaleType="centerCrop"
+            android:background="@drawable/trash"/>
+
+        <!-- Imagen de la nota -->
+        <ImageView
+            android:id="@+id/image_note"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentEnd="true"
+            android:scaleType="centerCrop"
+            android:background="@drawable/documents"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFA500">
+
+    <!-- Título de la actividad -->
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Aplicación notas: lista fecha"
+        android:textSize="27sp"
+        android:background="@drawable/gradient_background"
+        android:textColor="#000000"
+        android:padding="8dp" />
+
+    <!-- Campo de entrada para buscar nota por nombre -->
+    <RelativeLayout
+        android:id="@+id/search_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_title">
+
+        <EditText
+            android:id="@+id/edit_search"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_toStartOf="@+id/btn_search"
+            android:hint="Buscar por nombre"
+            android:inputType="text"
+            android:maxLines="1"
+            android:padding="8dp"
+            android:background="@drawable/cardview_background"/>
+
+        <ImageButton
+            android:id="@+id/btn_search"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/searching"
+            android:text=""
+            android:textColor="#000000"
+            android:contentDescription="Note's name"
+            android:padding="8dp" />
+
+    </RelativeLayout>
+
+    <!-- Botón flotante para crear nota -->
+    <ImageButton
+        android:id="@+id/btn_add"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/writing"
+        android:contentDescription="Create new note"
+        android:padding="8dp" />
+
+    <ImageButton
+        android:id="@+id/btn_calendar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="false"
+        android:background="@drawable/schedule"
+        android:contentDescription="Create new note"
+        android:padding="8dp" />
+
+    <!-- RecyclerView para mostrar la lista de notas -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_notes"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/search_layout"
+        android:layout_above="@id/btn_add"
+        android:layout_marginTop="16dp"
+        android:contentDescription="Enter How Much Cookies You Want"/>
+
+</RelativeLayout>

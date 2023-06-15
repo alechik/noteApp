@@ -1,0 +1,79 @@
+<!-- activity_note_edit.xml -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFA500">
+
+    <!-- Label "Nota" -->
+    <TextView
+        android:id="@+id/text_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nota: fecha"
+        android:textSize="27sp"
+        android:background="@drawable/gradient_background"
+        android:textColor="#000000"
+        android:padding="8dp"/>
+
+    <!-- EditText para editar el nombre de la nota -->
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_label"
+        android:textSize="25sp"
+        android:layout_marginTop="16dp"
+        android:hint="Nombre de la nota"
+        android:inputType="text"
+        android:padding="8dp" />
+
+    <!-- Botón para subir imágenes -->
+    <ImageButton
+        android:id="@+id/btn_upload_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/edit_title"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/photo"
+        android:contentDescription="Upload"
+
+        android:padding="8dp" />
+
+    <!-- Botón para guardar la nota -->
+    <ImageButton
+        android:id="@+id/btn_save"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/edit_title"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/savefiles"
+        android:contentDescription="check"
+        android:padding="8dp" />
+
+    <!-- EditText para escribir el contenido de la nota -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/btn_upload_image">
+        <EditText
+            android:id="@+id/edit_content"
+            android:gravity="top"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/btn_upload_image"
+            android:layout_marginTop="16dp"
+            android:textSize="25sp"
+            android:hint="Escribe aquí tu nota"
+            android:inputType="textMultiLine"
+            android:padding="10dp"
+            android:background="@drawable/cardview_background"/>
+    </LinearLayout>
+
+
+
+</RelativeLayout>
